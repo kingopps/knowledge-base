@@ -1,0 +1,70 @@
+# ===== 敏感信息（绝对不能上传）=====
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ===== 包管理 =====
+.Python
+uv.lock
+# 注意：如果你希望锁定依赖版本，可以删除上面这行保留 uv.lock
+
+# ===== 测试 / 类型检查缓存 =====
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ===== IDE / 编辑器 =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ===== 日志与临时文件 =====
+*.log
+logs/
+temp-files/
+output/
+
+# ===== 数据库文件 =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== 向量库 / 对象存储本地缓存 =====
+*.milvus
+*.bin
+
+# ===== Node 前端（如果有）=====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== 构建产物 =====
+.next/
+out/
+*.tsbuildinfo

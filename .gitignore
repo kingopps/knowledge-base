@@ -1,10 +1,18 @@
 # ===== 敏感信息（绝对不能上传）=====
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 *.pem
 *.key
 secrets/
+
+# ===== 内部资料（开发日记，不公开）=====
+studynote/dairy/
+
+# ===== 文档源数据（体积大，不入库）=====
+doc/*.pdf
+doc/*.docx
+doc/*.pptx
 
 # ===== Python =====
 __pycache__/

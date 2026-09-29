@@ -96,9 +96,8 @@ knowledge_base/
 │   └── page/                  # chat.html / import.html
 ├── tool/logger.py             # 全局彩色日志
 ├── test/                      # 单元测试与端到端测试
-├── studynote/                 # 学习笔记与开发日记
-│   ├── note/                  # 课程笔记（项目简介、原理讲解）
-│   └── dairy/                 # 开发日记 + 项目复现指南
+├── studynote/                 # 学习笔记（仅 note 公开）
+│   └── note/                  # 课程笔记（项目简介、原理讲解）
 ├── doc/                       # 测试用 PDF 文档（不入库）
 ├── output/                    # 节点产出（不入库）
 ├── pyproject.toml
@@ -121,7 +120,7 @@ knowledge_base/
 
 部署 Milvus（含 etcd + 内置 MinIO + Attu）、独立 MinIO、MongoDB，开放端口：22 / 7000 / 9000-9001 / 19530 / 27017 / 8000-8001。
 
-详细步骤参见 `studynote/dairy/00【掌柜智库】项目复现指南.md` 第四章。
+中间件部署为常规 Docker 操作，可参考 Milvus / MinIO / MongoDB 官方文档；本项目使用 Milvus 2.5.5 + Attu 2.5.10、独立 MinIO、MongoDB latest。
 
 ### 2. 克隆代码 + 配置环境
 
@@ -220,12 +219,9 @@ curl -X POST http://localhost:8001/query
 
 ## 📚 学习资料
 
-本项目配套有完整的学习笔记与开发日记，位于 `studynote/` 目录：
+本项目配套有课程学习笔记，位于 `studynote/note/` 目录（项目简介、原理讲解、技术栈详解）。
 
-- `studynote/note/`：课程笔记（项目简介、原理讲解、技术栈详解）
-- `studynote/dairy/`：开发日记 + **项目复现指南**（含 36 个踩坑记录、10 天开发计划、常用命令速查）
-
-> 任何人按 `studynote/dairy/00【掌柜智库】项目复现指南.md` 从零操作，可 1:1 复现当前全部进度。
+> 开发日记与项目复现指南为内部资料，未包含在公开仓库中。
 
 ---
 
@@ -250,4 +246,4 @@ curl -X POST http://localhost:8001/query
 | 前端页面 + 多文档测试 | ✅ 完成 |
 | 部署优化（Nginx / 进程守护 / 日志） | 🚧 待办 |
 
-详细进度与 47 项验证清单见 `studynote/dairy/00【掌柜智库】项目复现指南.md`。
+本项目已完成全流程联调，详见上方各模块说明。
